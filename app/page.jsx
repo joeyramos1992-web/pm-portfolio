@@ -209,7 +209,7 @@ export default function Page() {
       <div className="mx-auto max-w-6xl">
         <header className="mb-14">
           <h1 className="text-4xl font-bold tracking-tight">
-            Property Management Portfolio
+            Property Management Portfolio of Joey Ramos
           </h1>
           <p className="mt-3 max-w-3xl text-white/60">
             Preview of Class A Multifamily Assets managed over the course of 12 years with two different firms in Ponte Gadea and Crescent Heights.
