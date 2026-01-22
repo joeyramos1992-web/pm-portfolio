@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-0: #0f1115;
+  --bg-1: #14131a;
+  --bg-warm: #15110c;
+  --card: rgba(255, 255, 255, 0.06);
+  --card-border: rgba(255, 255, 255, 0.10);
+  --muted: rgba(255, 255, 255, 0.65);
+  --muted-2: rgba(255, 255, 255, 0.50);
+  --text: rgba(255, 255, 255, 0.92);
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  color: var(--text);
+  /* Warm charcoal (Option 2 vibe): subtle brown/espresso undertone + soft texture */
+  background:
+    radial-gradient(1200px 700px at 18% 10%, rgba(210, 154, 90, 0.10), transparent 55%),
+    radial-gradient(900px 600px at 70% 20%, rgba(110, 140, 255, 0.10), transparent 55%),
+    radial-gradient(1100px 800px at 40% 85%, rgba(255, 255, 255, 0.05), transparent 60%),
+    linear-gradient(135deg, #0b0d10 0%, #141015 45%, #15110c 100%);
+}
+
+@layer components {
+  .glass {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(10px);
+  }
+  .chip {
+    @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    color: rgba(255, 255, 255, 0.75);
+  }
+  .btn {
+    @apply inline-flex items-center justify-center rounded-full px-3 py-1 text-xs font-medium transition;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.85);
+  }
+  .btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+}
